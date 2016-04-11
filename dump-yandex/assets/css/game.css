@@ -1,0 +1,41 @@
+body {
+  background: linear-gradient( to top left, #10293A, #000, #10293A );
+  height: 100vh;
+  padding: 100px;
+}
+
+.row {
+  width: 320px;
+  height: 105px;
+  margin: 0 auto;
+}
+
+.suit-label {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #00FFFF;
+}
+
+.suit-input {
+  visibility: hidden;
+}
+
+input.suit-input + span.suit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+span.diamonds {
+  background: url(../img/diamonds.png) no-repeat 50%;
+}
+
+
+input:checked + span {
+  background: url(../img/diamonds.png) no-repeat 50%;
+}
