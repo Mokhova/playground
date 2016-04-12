@@ -48,7 +48,25 @@ input:checked + span.suit.hearts{
   background: url(../img/hearts.png) no-repeat 50%;
 }
 
+input + .suit1{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.diamonds1{
+  background: url(../img/diamonds.png) no-repeat 50%;
+  opacity: 0;
+  transition: opacity .5s ease-in-out 0.2s;
+}
 
+input:checked + span.suit1.diamonds1{
+  opacity: 1;
+  transition: opacity .5s ease-in-out 0.2s;
+}
+
+/*
 @keyframes start-fadeOut {
     from {
       span.suit.diamonds{
@@ -66,4 +84,4 @@ input:checked + span.suit.hearts{
     }
     to {
         /* CSS свойства для второго кадра */
-    }
+    }*/
