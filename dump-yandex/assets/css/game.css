@@ -19,11 +19,11 @@ body {
   border: 1px solid #00FFFF;
 }
 
-.suit-input {
+input {
   visibility: hidden;
 }
 
-input.suit-input + span.suit {
+input + .suit{
   position: absolute;
   left: 0;
   top: 0;
@@ -31,11 +31,39 @@ input.suit-input + span.suit {
   height: 100%;
 }
 
-span.diamonds {
+/*.diamonds {
+  background: url(../img/diamonds.png) no-repeat 50%;
+}*/
+
+
+input:checked + span.suit.diamonds{
   background: url(../img/diamonds.png) no-repeat 50%;
 }
 
-
-input:checked + span {
-  background: url(../img/diamonds.png) no-repeat 50%;
+input:checked + span.suit.spades{
+  background: url(../img/spades.png) no-repeat 50%;
 }
+
+input:checked + span.suit.hearts{
+  background: url(../img/hearts.png) no-repeat 50%;
+}
+
+
+@keyframes start-fadeOut {
+    from {
+      span.suit.diamonds{
+        background: url(../img/diamonds.png) no-repeat 50%;
+      }
+
+      input:checked + span.suit.spades{
+        background: url(../img/spades.png) no-repeat 50%;
+      }
+
+      input:checked + span.suit.hearts{
+        background: url(../img/hearts.png) no-repeat 50%;
+      }
+
+    }
+    to {
+        /* CSS свойства для второго кадра */
+    }
