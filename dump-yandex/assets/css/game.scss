@@ -4,10 +4,15 @@ body {
   padding: 100px;
 }
 
-.row {
-  width: 320px;
-  height: 101px;
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 306px;
   margin: 0 auto;
+}
+
+.row {
+  height: 101px;
 }
 
 .suit-label {
@@ -69,7 +74,23 @@ input:checked + span.suit{
   transition: opacity .5s ease-in-out 0.2s;
 }
 
+$type: hearts; 
 
+}
+
+//
+// $type: monster;
+// p {
+//   @if $type == ocean {
+//     color: blue;
+//   } @else if $type == matador {
+//     color: red;
+//   } @else if $type == monster {
+//     color: green;
+//   } @else {
+//     color: black;
+//   }
+// }
 
 /*
 @keyframes start-fadeOut {
